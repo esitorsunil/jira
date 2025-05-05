@@ -7,10 +7,11 @@ import Navbar from './Components/NavBar';
 import JiraAdminPage from './JiraPages/AdminJira';
 import ProtectedRoute from './Components/ProtectRoute';
 import MyTasks from './JiraPages/Tasks';
-import Members from './JiraPages/Members';
+
 import Settings from './JiraPages/Settings';
 import JiraHome from './JiraPages/JiraHome';
-import Projects from './JiraPages/Projects';
+import Workspace from './JiraPages/Projects';
+import MembersPage from './JiraPages/MembersPage';
 
 function AppWrapper() {
   return (
@@ -44,9 +45,9 @@ function App() {
             <Route path="/jira" element={<JiraAdminPage />}>
               <Route index element={<Navigate to="/jira/my-tasks" replace />} />
               <Route path="home" element={<JiraHome />} />
-              <Route path="projects" element={<Projects />} />
+              <Route path="projects" element={<Workspace />} />
               <Route path="my-tasks" element={<MyTasks />} />
-              <Route path="members" element={<Members />} />
+              <Route path="members" element={<MembersPage />} />
               <Route path="settings" element={<Settings />} />
             </Route>
           </Route>

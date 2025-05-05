@@ -103,7 +103,7 @@ export default function JiraHeader() {
 
       {/* Logout Confirmation Modal */}
       {showLogoutConfirm && (
-        <div className="modal-backdrop show d-flex align-items-center justify-content-center">
+        <div className="modal show d-flex align-items-center justify-content-center">
           <div className="modal d-block" tabIndex="-1">
             <div className="modal-dialog modal-dialog-centered">
               <div className="modal-content">

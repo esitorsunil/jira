@@ -21,7 +21,7 @@ export default function SideNavbar() {
       {/* Toggle Button */}
       <div className="toggle-btn d-flex justify-content-end p-3">
         <button 
-          className="btn btn-sm btn-outline-light rounded-circle text-white"
+          className="btn btn-sm btn-outline-light rounded-circle text-blue"
           onClick={() => setExpanded(!expanded)}
           aria-label={expanded ? 'Collapse menu' : 'Expand menu'}
         >
