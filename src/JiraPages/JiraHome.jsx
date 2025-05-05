@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Settings = () => {
+const JiraHome = () => {
   return (
     <div>
-      settings
+      Home
     </div>
   )
 }
 
-export default Settings
+export default JiraHome

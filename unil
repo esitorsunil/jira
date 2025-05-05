@@ -1,0 +1,11 @@
+[33mcommit 7c4068717a57a99ab34e3de5ace4a66e445ebd54[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31msunil/main[m[33m, [m[1;31msunil/HEAD[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Sunil Esitor <sunil.esitor@pranathiss.local>
+Date:   Fri May 2 08:07:26 2025 -0400
+
+    Landing page, feat: Login auth
+
+[33mcommit da25f63b561d5177591b2f3c22a52386a4af1842[m
+Author: Sunil Esitor <sunil.esitor@pranathiss.local>
+Date:   Fri May 2 02:52:28 2025 -0400
+
+    Project Setup

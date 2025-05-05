@@ -32,7 +32,7 @@ export default function Login() {
         if (user.role === 'admin') {
           navigate('/jira');
         } else {
-          navigate('/dashboard');
+          navigate('/');
         }
       } else {
         setError('Invalid email or password');

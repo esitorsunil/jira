@@ -23,4 +23,7 @@ Planning
 
 - Login page (admin)
  - invited button (for members)
+<<<<<<< HEAD
+=======
 
+>>>>>>> 7c40687 (Landing page, feat: Login auth)

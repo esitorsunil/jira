@@ -6,6 +6,11 @@ import Login from './Pages/Login';
 import Navbar from './Components/NavBar';
 import JiraAdminPage from './JiraPages/AdminJira';
 import ProtectedRoute from './Components/ProtectRoute';
+import MyTasks from './JiraPages/Tasks';
+import Members from './JiraPages/Members';
+import Settings from './JiraPages/Settings';
+import JiraHome from './JiraPages/JiraHome';
+import Projects from './JiraPages/Projects';
 
 function AppWrapper() {
   return (
@@ -17,8 +22,10 @@ function AppWrapper() {
 
 function App() {
   const location = useLocation();
-  const hideNavbarPaths = [ '/jira', '/dashboard'];
-  const showNavbar = !hideNavbarPaths.includes(location.pathname);
+  const hideNavbarPaths = ['/login', '/jira', '/jira/*', '/dashboard'];
+  const showNavbar = !hideNavbarPaths.some(path => 
+    location.pathname === path || location.pathname.startsWith(path.replace('*', ''))
+  );
 
   return (
     <>
@@ -32,9 +39,16 @@ function App() {
           <Route path="/templates" element={<Templates />} />
           <Route path="/login" element={<Login />} />
 
-          {/* Protected Routes */}
+          {/* Protected Admin Routes */}
           <Route element={<ProtectedRoute allowedRoles={['admin']} />}>
-            <Route path="/jira" element={<JiraAdminPage />} />
+            <Route path="/jira" element={<JiraAdminPage />}>
+              <Route index element={<Navigate to="/jira/my-tasks" replace />} />
+              <Route path="home" element={<JiraHome />} />
+              <Route path="projects" element={<Projects />} />
+              <Route path="my-tasks" element={<MyTasks />} />
+              <Route path="members" element={<Members />} />
+              <Route path="settings" element={<Settings />} />
+            </Route>
           </Route>
 
           {/* Redirects */}
